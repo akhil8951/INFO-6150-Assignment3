@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<!-- Also read chapter 9 from slides - Regular Expressions -->
+
+<html>
+  <head>
+    <title>Table CheckList</title>
+    <link rel="stylesheet" type="text/css" href="table.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Akhileshkumar S Kumbar [002201470]</h1>
+    </header>
+    <table id="myTable">
+      <tr>
+        <th></th>
+        <th>STUDENT</th>
+        <th>ADVISOR</th>
+        <th>AWARD<br />STATUS</th>
+        <th>SEMESTER</th>
+        <th>TYPE</th>
+        <th>BUDGET<br />#</th>
+        <th>PERCENTAGE</th>
+        <!-- <th>DELETE</th>
+        <th>EDIT</th> -->
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="checkbox"
+            onclick="onClickCheckbox(this)"
+          /><br /><br /><img
+            onclick="dropDown(this)"
+            id="downArrow"
+            src="down.png"
+            width="25px"
+          />
+        </td>
+        <td>Student 1</td>
+        <td>Teacher 1</td>
+        <td>Approved</td>
+        <td>Fall</td>
+        <td>TA</td>
+        <td>12345</td>
+        <td>100%</td>
+      </tr>
+      <tr class="dropDownTextArea">
+        <td colspan="8">
+          Advisor:<br /><br />
+          Award Details<br />
+          Summer 1-2014(TA)<br />
+          Budget Number: <br />
+          Tuition Number: <br />
+          Comments:<br /><br /><br />
+          Award Status:<br /><br /><br />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="checkbox"
+            onclick="onClickCheckbox(this)"
+          /><br /><br /><img
+            onclick="dropDown(this)"
+            id="downArrow"
+            src="down.png"
+            width="25px"
+          />
+        </td>
+        <td>Student 2</td>
+        <td>Teacher 2</td>
+        <td>Approved</td>
+        <td>Fall</td>
+        <td>TA</td>
+        <td>23456</td>
+        <td>100%</td>
+      </tr>
+      <tr class="dropDownTextArea">
+        <td colspan="8">
+          Advisor:<br /><br />
+          Award Details<br />
+          Summer 1-2014(TA)<br />
+          Budget Number: <br />
+          Tuition Number: <br />
+          Comments:<br /><br /><br />
+          Award Status:<br /><br /><br />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input
+            type="checkbox"
+            onclick="onClickCheckbox(this)"
+          /><br /><br /><img
+            onclick="dropDown(this)"
+            id="downArrow"
+            src="down.png"
+            width="25px"
+          />
+        </td>
+        <td>Student 3</td>
+        <td>Teacher 3</td>
+        <td>Approved</td>
+        <td>Fall</td>
+        <td>TA</td>
+        <td>34567</td>
+        <td>100%</td>
+      </tr>
+      <tr class="dropDownTextArea">
+        <td colspan="8">
+          Advisor:<br /><br />
+          Award Details<br />
+          Summer 1-2014(TA)<br />
+          Budget Number: <br />
+          Tuition Number: <br />
+          Comments:<br /><br /><br />
+          Award Status:<br /><br /><br />
+        </td>
+      </tr>
+    </table>
+
+    <br /><br />
+
+    <button id="button">SUBMIT SELECTED AWARDS</button>
+    <button id="add" onclick="addRecord()">Add New Student</button>
+
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+      </div>
+      <div class="modal-body">
+        <form action="updateStudentDetails">
+          <label for="studentName">Student: </label>
+          <input type="text" id="studentName" name="studentName" /><br />
+          <label for="teacherName">Teacher: </label>
+          <input type="text" id="teacherName" name="teacherName" /><br />
+          <label for="studentName">Award Status: </label>
+          <input type="text" id="awardStatus" name="awardStatus" /><br />
+          <label for="studentName">Semester: </label>
+          <input type="text" id="semester" name="semester" /><br />
+          <label for="studentName">Type: </label>
+          <input type="text" id="type" name="type" /><br />
+          <label for="studentName">Budget: </label>
+          <input type="text" id="budget" name="budget" /><br />
+          <label for="studentName">Percentage: </label>
+          <input type="text" id="percentage" name="percentage" /><br />
+        </form>
+      </div>
+      <button id="update" onclick="onClickUpdate()">Update</button>
+      <button id="cancelModal" onclick="onClickCancel()">Cancel</button>
+    </div>
+    <div id="overlay"></div>
+
+    <nav class="socialmediaicons"></nav>
+    <script src="script.js"></script>
+  </body>
+</html>

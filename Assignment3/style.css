@@ -1,0 +1,90 @@
+body {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  justify-content: center;
+}
+header {
+  text-align: center;
+}
+
+.socialmediaicons ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socialmediaicons ul li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.socialmediaicons ul li img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.socialmediaicons {
+  text-align: center;
+}
+
+.dropDownTextArea {
+  display: none;
+}
+
+.dropDownTextArea td {
+  column-span: 8;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1.5px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 450px;
+  max-width: 80%;
+  height: 500px;
+  max-height: 80%;
+}
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px 10px 15px;
+  font-size: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  padding: 5px 5px 5px 5px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
